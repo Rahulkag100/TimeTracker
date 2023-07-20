@@ -1,0 +1,24 @@
+.button-component {
+  background-color: #5056ed;
+  border-radius: 57px;
+  width: 136px;
+  height: 40px;
+  cursor: pointer;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border: none;
+  outline: none;
+}
+.stopBtn {
+  background-color: #ed5050;
+}
+
+.button-component:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: default;
+}

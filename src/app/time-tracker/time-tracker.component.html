@@ -1,0 +1,50 @@
+<div class="timeTrackerMainContainer">
+  <app-header [totalTimeSpend]="totalTimeSpend"></app-header>
+  <div class="time-tracker-container">
+    <div class="search-task">
+      <input
+        (keyup)="searchTimeTracker($event)"
+        class="input-task"
+        placeholder="Search Task by Task Title"
+      />
+    </div>
+    <ng-container *ngIf="allTimeTrackData.length > 0; else dataNotFound">
+      <app-tracker-card
+        [trackerData]="allTimeTrackData"
+        (trackerUpdatedData)="getAllTimeTrackerData($event)"
+        (totalTimeSpend)="getTotalTimeSpend($event)"
+      >
+      </app-tracker-card>
+    </ng-container>
+    <ng-template #dataNotFound>
+      <div class="data-not-found">
+        Task Not Available , Click on the Add button to add a Task
+      </div>
+    </ng-template>
+    <div (click)="openModal()" class="tracker-task-container">
+      <div class="add-task" title="Add Task">
+        <img src="assets/plus-icon.svg" />
+      </div>
+    </div>
+  </div>
+</div>
+<app-modal
+  [isOpen]="modalOpen"
+  [disableClose]="disableModalClose"
+  (closeModal)="closeModal()"
+>
+  <div class="task-modal-component">
+    <div class="task-details">
+      <label class="task-label">Enter the Task Name</label>
+      <input
+        (keyup)="enterInputValues($event)"
+        [(ngModel)]="inputValue"
+        class="task-input"
+      />
+    </div>
+    <div (click)="saveTrackerTask()">
+      <app-button [disableBtn]="disableBtn" [buttonText]="buttonLabel">
+      </app-button>
+    </div>
+  </div>
+</app-modal>

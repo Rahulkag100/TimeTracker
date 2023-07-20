@@ -1,0 +1,48 @@
+<div class="tracker-card-component">
+  <div class="tracker-card-section">
+    <div
+      class="tracker-card"
+      *ngFor="let cardItem of trackerData; let cardIndex = index"
+    >
+      <div class="tracker-card-data">
+        <div class="tracker-card-heading">
+          <div class="tracker-task-title">{{ cardItem.taskName }}</div>
+          <div class="tracker-seprate"></div>
+        </div>
+        <div class="tracker-history">
+          <div class="tracker-title">History</div>
+          <div
+            class="tracker-history-data"
+            *ngIf="cardItem.history.length === 0"
+          >
+            No History Found, Click on the start button to track the timer
+          </div>
+          <div
+            class="tracker-history-data"
+            *ngFor="
+              let trackerHistory of cardItem.history;
+              let historyIndex = index
+            "
+          >
+            {{ trackerHistory }}
+          </div>
+        </div>
+      </div>
+      <div class="tracker-card-timing">
+        <div class="tracker-countdown">{{ cardItem.timerDisplay }}</div>
+        <div class="tracker-countdown-action">
+          <div class="trigger-btn" (click)="toggleTimer(cardItem, cardIndex)">
+            <app-button [buttonText]="cardItem.buttonTextLabel"></app-button>
+          </div>
+          <div
+            class="delete-task"
+            (click)="deleteTracker(cardItem, cardIndex)"
+            title="Delete Task"
+          >
+            <img src="assets/cross-icon.svg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

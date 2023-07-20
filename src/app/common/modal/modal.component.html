@@ -1,0 +1,5 @@
+<div class="modal" [class.open]="isOpen" (click)="onCloseModal()">
+  <div class="modal-content" (click)="onModalClick($event)">
+    <ng-content></ng-content>
+  </div>
+</div>

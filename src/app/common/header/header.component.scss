@@ -1,0 +1,36 @@
+.header-container {
+  height: 60px;
+  width: 100vw;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+  }
+  .header-time-spend {
+    display: flex;
+    gap: 15px;
+    .time-spend-title {
+      color: rgba(0, 0, 0, 0.75);
+      font-family: "Ubuntu", sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .time-spend {
+      color: #000;
+      font-family: "Ubuntu", sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+}

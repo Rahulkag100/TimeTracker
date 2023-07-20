@@ -1,0 +1,79 @@
+.timeTrackerMainContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  .time-tracker-container {
+    height: calc(100vh - 60px);
+    background-color: #f2f6f8;
+    overflow-y: scroll;
+    .search-task {
+      display: flex;
+      justify-content: center;
+      margin-top: 12px;
+      .input-task {
+        width: 30%;
+        height: 40px;
+        border-radius: 24px;
+        border: 1px solid #d9d9d9;
+        outline: none;
+        padding-left: 12px;
+      }
+    }
+    .data-not-found {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      font-size: 24px;
+      font-family: "Inter", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .tracker-task-container {
+      position: absolute;
+      bottom: 24px;
+      right: 32px;
+      .add-task {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #5056ed;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.task-modal-component {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 12px;
+  .task-details {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    .task-label {
+      color: #000;
+      font-family: "Inter", sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .task-input {
+      border-radius: 8px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      height: 40px;
+      outline: none;
+      padding-left: 12px;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.tracker-card-component {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  .tracker-card-section {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    .tracker-card {
+      margin-top: 30px;
+      border-radius: 25px;
+      background-color: #fff;
+      box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.1);
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: row;
+      .tracker-card-data {
+        width: 60%;
+        .tracker-card-heading {
+          display: flex;
+          justify-content: space-between;
+          .tracker-task-title {
+            color: rgba(0, 0, 0, 0.9);
+            font-family: "Inter", sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+          }
+          .tracker-seprate {
+            width: 2px;
+            height: 40px;
+            background-color: #d9d9d9;
+          }
+        }
+        .tracker-history {
+          display: flex;
+          flex-direction: column;
+          .tracker-title {
+            color: #000;
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          }
+          .tracker-history-data {
+            padding-top: 12px;
+            color: rgba(0, 0, 0, 0.8);
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+      .tracker-card-timing {
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .tracker-countdown {
+          padding: 10px 0px 0px 24px;
+          color: #5056ed;
+          font-family: "Inter", sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+        .tracker-countdown-action {
+          display: flex;
+          gap: 12px;
+          .trigger-btn {
+            // margin-left: 60px;
+          }
+          .delete-task {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #d9d9d9;
+            color: #000;
+            font-weight: bold;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
